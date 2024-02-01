@@ -1,6 +1,6 @@
 ## Website name- Movie-Magic-Tickets
 
-### Website live Link- https://dream-property.netlify.app/
+### Website live Link- https://movie-magic-tickets.netlify.app/
 
 ### Technologies:
 
