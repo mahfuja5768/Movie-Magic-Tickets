@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { FaStar } from "react-icons/fa";
 import { Link, useParams } from "react-router-dom";
 import { SlCalender } from "react-icons/sl";
+import Modal from "../components/Modal/Modal";
 
 export default function ShowDetails() {
   const { id } = useParams();
@@ -21,8 +22,21 @@ export default function ShowDetails() {
     };
     fetchData();
   }, []);
+
+  const [showAddModal, setShowAddModal] = useState(false);
+  function handleCloseClick() {
+    setShowAddModal(false);
+  }
+
   return (
-    <div className="container px-3 mx-auto my-12 text-white">
+    <div className="container px-3 mx-auto text-white h-screen flex">
+         {showAddModal && (
+            <Modal
+              movie={movie}
+              setShowAddModal={setShowAddModal}
+              onCloseClick={handleCloseClick}
+            />
+          )}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-center items-center">
         <div className=" flex flex-col justify-center items-center">
           <h2 className="text-2xl text-primary font-bold my-4">Summary</h2>
@@ -79,7 +93,10 @@ export default function ShowDetails() {
             <p>{movie?.schedule?.days}</p>
             <p>{movie?.schedule?.time}</p>
           </div>
-          <button className="hover:bg-primary border-2 font-semibold border-primary hover:text-black px-4 py-2 rounded-md my-4 bg-transparent transition-all duration-300 text-primary">
+          <button
+            className="hover:bg-primary border-2 font-semibold border-primary hover:text-black px-4 py-2 rounded-md my-4 bg-transparent transition-all duration-300 text-primary"
+            onClick={() => setShowAddModal(true)}
+          >
             Buy Ticket
           </button>
         </div>

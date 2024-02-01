@@ -16,11 +16,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/details/:id",
-        element: (
-            <ShowDetails />
-     
-        ),
-        // loader: ({ params }) => getDetails(params.id),
+        element: <ShowDetails />,
       },
     ],
   },

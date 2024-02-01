@@ -17,7 +17,8 @@ const Layout = () => {
 
   return (
     <div className="font-inter">
-      <Outlet></Outlet>
+      <Outlet>
+      </Outlet>
     </div>
   );
 };

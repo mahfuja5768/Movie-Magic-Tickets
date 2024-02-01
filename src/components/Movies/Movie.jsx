@@ -3,7 +3,7 @@ import { FaStar } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 export default function Movie({ movie }) {
-  const { score, show, image } = movie || {};
+  const { score, show } = movie || {};
   //   console.log(movie);
   const [isHovered, setIsHovered] = useState(false);
 

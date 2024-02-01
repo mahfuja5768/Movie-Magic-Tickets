@@ -1,8 +1,15 @@
-# React + Vite
+## Website name- Movie-Magic-Tickets
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Website live Link- https://dream-property.netlify.app/
 
-Currently, two official plugins are available:
+### Technologies:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- This project is made by React, Tailwind CSS.
+
+### Website features:
+
+- There is a banner, all movies sections, a footer.
+- When hover on a movie card user can see short details and a show details button.
+- By clicking on show details button will redirect to the movie details page .
+- There are two button one if for official page and other is for buying ticket .
+- By clicking on the buy ticket button user can buy any ticket.
